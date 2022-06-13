@@ -1,10 +1,11 @@
+import allure
 import pytest
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
-
+@allure.feature('Cелект в шапке')
 def test_select_header(browser):
     # нахождение элемнта
     select = Select(browser.find_element(By.NAME, 'select-country'))

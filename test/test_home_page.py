@@ -1,3 +1,5 @@
+import allure
+
 from variables import URL
 import selenium
 from selenium import webdriver
@@ -11,7 +13,7 @@ def test_find_element_for_page_home(browser):
     MainPage(browser).find_element_master_detail()
     MainPage(browser).compare_link()
 
-
+@allure.story('Story telephone at home page')
 def test_home_page_telephone(browser):
     HomePage(browser).compare_link_home()
 

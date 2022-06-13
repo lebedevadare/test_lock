@@ -1,10 +1,11 @@
+import allure
 import pytest
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from locators import Home, ToolsShop
 
-
+@allure.feature('Shop-tools')
 def test_link_for_tool(browser):
     # нахождение элемента
     tools_link = browser.find_element(by=By.CSS_SELECTOR, value=Home.home.tools_link_at_home)

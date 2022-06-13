@@ -1,10 +1,11 @@
+import allure
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from locators import Pagination
 
-
+@allure.feature('Пагинация')
 def test_pagination(browser):
     # нашли элементы
     el = browser.find_element(by=By.CSS_SELECTOR, value=Pagination.pag.header_post)
